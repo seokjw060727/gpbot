@@ -4,8 +4,30 @@ const token = process.env.token;
 
 client.on('ready', () => {
   console.log('봇 켜짐.');
+  client.user.setPresence({ game: { name: '게임페인서버 온라인!' }, status: 'online' })
 });
 
+client.on('message', (message) => {
+  if(message.author.bot) return;
+
+  if(message.content == '!돈줘') {
+    return message.reply('시러요!);
+  }
+
+client.on('message', (message) => {
+  if(message.author.bot) return;
+  
+  if(message.content == '!돈내놔') {
+    return message.reply('안돼요!);
+  }
+
+client.on('message', (message) => {
+  if(message.author.bot) return;
+  
+  if(message.content == '!돈받기') {
+    return message.reply('하지마세요!);
+  }
+  
 client.on('message', (message) => {
   if(message.author.bot) return;
 
